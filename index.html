@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="start">
+        <img src="img.svg" alt=""/>
+        <span>Start Game</span>
+    </div>
+    <div class="result">
+        <span></span>
+        <div class="btn">Replay</div>
+        <div class="showRes">Show Results</div>
+    </div>
+    <div class="info">
+        <div class="name">
+            Hello <span></span>
+        </div>
+        <div class="time"></div>
+        <div class="tries">
+            Wrong tries: <span>0</span>
+        </div>
+    </div>
+    <div class="memory-game-blocks">
+        <div class="game-block" data-social="facebook">
+            <div class="face front"><i class="fa-solid fa-question"></i></div>
+            <div class="face back">
+                <i style="color: #1877F2;" class="fa-brands fa-facebook-f"></i>
+            </div>
+        </div>
+        <div class="game-block" data-social="facebook">
+            <div class="face front"><i class="fa-solid fa-question"></i></div>
+            <div class="face back">
+                <i style="color: #1877F2;" class="fa-brands fa-facebook-f"></i>
+            </div>
+        </div>
+        <div class="game-block" data-social="whatsapp">
+            <div class="face front"><i class="fa-solid fa-question"></i></div>
+            <div class="face back">
+                <i style="color: #25D366;" class="fa-brands fa-whatsapp"></i>
+            </div>
+        </div>
+        <div class="game-block" data-social="whatsapp">
+            <div class="face front"><i class="fa-solid fa-question"></i></div>
+            <div class="face back">
+                <i style="color: #25D366;" class="fa-brands fa-whatsapp"></i>
+            </div>
+        </div>
+        <div class="game-block" data-social="linked">
+            <div class="face front"><i class="fa-solid fa-question"></i></div>
+            <div class="face back">
+                <i style="color: #0A66C2;" class="fa-brands fa-linkedin-in"></i>
+            </div>
+        </div>
+        <div class="game-block" data-social="linked">
+            <div class="face front"><i class="fa-solid fa-question"></i></div>
+            <div class="face back">
+                <i style="color: #0A66C2;" class="fa-brands fa-linkedin-in"></i>
+            </div>
+        </div>
+        <div class="game-block" data-social="google">
+            <div class="face front"><i class="fa-solid fa-question"></i></div>
+            <div class="face back">
+                <i style="color: #CD201F;" class="fa-brands fa-google-plus-g"></i>     
+        </div>
+        </div>
+        <div class="game-block" data-social="google">
+            <div class="face front"><i class="fa-solid fa-question"></i></div>
+            <div class="face back">
+                <i style="color: #CD201F;" class="fa-brands fa-google-plus-g"></i>     
+            </div>
+        </div>
+        <div class="game-block" data-social="twitter">
+            <div class="face front"><i class="fa-solid fa-question"></i></div>
+            <div class="face back">
+                <i style="color: #1DA1F2;" class="fa-brands fa-twitter"></i> 
+            </div>
+        </div>
+        <div class="game-block" data-social="twitter">
+            <div class="face front"><i class="fa-solid fa-question"></i></div>
+            <div class="face back">
+                <i style="color: #1DA1F2;" class="fa-brands fa-twitter"></i> 
+            </div>
+        </div>
+        <div class="game-block" data-social="instagram">
+            <div class="face front"><i class="fa-solid fa-question"></i></div>
+            <div class="face back">
+                <i style="color: #E4405F;" class="fa-brands fa-instagram"></i>
+            </div>
+        </div>
+        <div class="game-block" data-social="instagram">
+            <div class="face front"><i class="fa-solid fa-question"></i></div>
+            <div class="face back">
+                <i style="color: #E4405F;" class="fa-brands fa-instagram"></i>
+            </div>
+        </div>
+    </div>
+    <div class="scores">
+        <span class="close">X</span>
+        <div class="scores-box">
+            <h4>Recent Scores</h4>
+        </div>
+    </div>
+    <audio src="audio/game-music.wav" id="game" preload="auto"></audio>
+    <audio id="success" src="audio/success.wav" preload="auto"></audio>
+    <audio id="fail" src="audio/fail.mp3" preload="auto"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
