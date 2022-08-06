@@ -35,6 +35,7 @@ console.log(score)
 function startNow() {
   let timeleft = 100
   let counter = 0
+  let timer = setInterval(timeIt, 1000)
   function converts(s) {
     let mins = Math.floor(s / 60)
     let min = mins < 10 ? '0' + mins : mins
@@ -55,13 +56,18 @@ function startNow() {
       if (block.classList.contains('match')) {
         i++
       }
-      if (i == blocks.length && parseInt(tries.innerHTML) < 7) {
+      if (i == blocks.length) {
         clearInterval(timer)
         document.querySelector('.memory-game-blocks').classList.add('no-click')
         gameSound.pause()
-        document.querySelector('.result').style.display = 'block'
-        localStorage.setItem(`Player-${nameSpan.innerHTML}`, score)
-        res.innerText = 'Good Job👏😍'
+        document.querySelector('.result').style.display = 'flex'
+        if (parseInt(tries.innerHTML) < 7) {
+          localStorage.setItem(`Player-${nameSpan.innerHTML}`, Math.floor(score))
+          res.innerText = 'Good Job👏😍'
+        } else {
+          res.innerText = 'Try again, you can do  it 😊'
+          localStorage.setItem(`player-${nameSpan.innerHTML}`, Math.floor(score))
+        }
       } else {
         res.innerText = 'Try again, you can do  it 😊'
         localStorage.setItem(`player-${nameSpan.innerHTML}`, Math.floor(score))
@@ -74,7 +80,6 @@ function startNow() {
     counter++
     time.innerHTML = converts(timeleft - counter)
   }
-  let timer = setInterval(timeIt, 1000)
 }
 
 //Replay button click actions
